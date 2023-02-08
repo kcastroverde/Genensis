@@ -1,0 +1,85 @@
+.container {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  background: linear-gradient(rgb(69, 255, 255), rgb(242, 63, 246));
+  height: 36px;
+  border-radius: 18px;
+  position: relative;
+  padding: 2px;
+  width: 280px;
+  font-size: 16px;
+}
+
+.container button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  gap: 8px;
+  font-size: inherit;
+  cursor: pointer;
+  height: 100%;
+  padding: 8px 15px;
+  border-radius: inherit;
+  position: absolute;
+  background: linear-gradient(rgb(69, 255, 255), rgb(242, 63, 246));
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 110px;
+  transition: 0.2s ease-in-out width;
+}
+
+.container.showInput button {
+  width: 50px;
+  overflow: hidden;
+}
+
+.container button span {
+  transform: translateY(-1px);
+  opacity: 1;
+  transition: 0.2s linear opacity;
+}
+
+.container.showInput button span {
+  opacity: 0;
+}
+
+.container button img {
+  height: 100%;
+  width: auto;
+  transform: translateY(1px);
+}
+
+.container label {
+  position: relative;
+  height: 100%;
+  border-radius: inherit;
+  cursor: text;
+  width: 100%;
+}
+
+.labelText {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: 0.2s ease-in-out opacity;
+}
+
+.container.showInput .labelText {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.container input {
+  height: 100%;
+  border-radius: inherit;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 55px;
+  padding-right: 10px;
+}

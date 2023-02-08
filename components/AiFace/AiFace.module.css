@@ -1,0 +1,9 @@
+.container {
+  height: 100%;
+  opacity: 1;
+  transition: 0.5s linear opacity;
+}
+
+.container.hidden {
+  opacity: 0;
+}

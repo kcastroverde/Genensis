@@ -1,0 +1,11 @@
+{
+  "tabs": {
+    "directos": "Mis Directos",
+    "binaria": "Red Binaria",
+    "uninivel": "Red Uninivel"
+  },
+  "binary": "Binario",
+  "score": "Puntos",
+  "activeUsers": "Usuarios activos",
+  "totalScore": "Total de puntos"
+}

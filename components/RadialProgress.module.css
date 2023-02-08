@@ -1,0 +1,37 @@
+.skill {
+  width: 190px;
+  height: 190px;
+  position: relative;
+}
+
+.outer {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+}
+
+.inner {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.skill circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  filter: url(#neon-glow);
+  stroke-width: 8px;
+  stroke-dasharray: 480;
+  stroke-linecap: round;
+}
+
+.skill svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}

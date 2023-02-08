@@ -1,0 +1,39 @@
+.everythingContainer {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 120px);
+  margin: auto;
+  min-height: 100vh;
+}
+
+.mainAndNavContainer {
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: rgba(24, 16, 94, 0.5);
+  border-radius: 25px;
+  padding: 25px;
+  height: 100%;
+  display: flex;
+}
+
+.mainAndNavContainer nav {
+  flex-shrink: 0;
+}
+
+.main {
+  margin-left: 25px;
+  flex-grow: 1;
+  min-height: 650px;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.spaceBeforeFooter {
+  flex-grow: 1;
+}
+
+.footer {
+  text-align: center;
+  margin: 25px;
+  font-size: 16px;
+  opacity: 0.9;
+}

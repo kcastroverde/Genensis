@@ -1,0 +1,11 @@
+{
+  "title": "Soporte",
+  "reasons": {
+    "changeEmail": "Cambio de correo",
+    "bugReport": "Informar de un problema"
+  },
+  "messageInputLabel": "Ayuda",
+  "submitBtn": "Solicitar servicio",
+  "bottomText": "Mediante este servicio, uno de nuestros asesores se pondrá en contacto con usted.",
+  "messagePlaceholder": "¿Como podemos ayudarte?"
+}

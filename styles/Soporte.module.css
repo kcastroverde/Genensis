@@ -1,0 +1,130 @@
+.container {
+  text-align: center;
+  height: 100%;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  height: 100%;
+}
+
+.innerContainer form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: -15px;
+}
+
+.innerContainer form label {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.inputBorder {
+  background: linear-gradient(rgb(242, 63, 246), rgb(69, 255, 255));
+  padding: 1px;
+  border-radius: 20px;
+  width: 100%;
+  margin: 20px 0;
+  position: relative;
+}
+
+.inputBorder > * {
+  display: block;
+  width: 100%;
+  border-radius: inherit;
+  border: none;
+  outline: none;
+  background: rgb(25, 21, 41);
+  font-size: 16px;
+}
+
+.inputBorder > *:focus {
+  box-shadow: 0 0 5px rgb(87, 45, 255), inset 0 0 5px rgb(87, 45, 255);
+}
+
+.innerContainer select {
+  padding-left: 17px;
+  height: 40px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.dropdownIcon {
+  width: 20px;
+  height: auto;
+  transform: translateY(-7px) rotate(-90deg);
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transition: 0.3s ease-in transform;
+  pointer-events: none;
+}
+
+.innerContainer select:focus + .dropdownIcon {
+  transform: translateY(-7px) rotate(90deg);
+}
+
+.innerContainer textarea {
+  resize: none;
+  padding: 15px;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.innerContainer form button {
+  text-align: center;
+  width: 90%;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(rgb(242, 63, 246), rgb(69, 255, 255));
+  cursor: pointer;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.innerContainer form button:hover {
+  box-shadow: 0 0 5px rgb(168, 113, 255);
+}
+
+.innerContainer form button:active {
+  transform: scale(0.99);
+}
+
+.innerContainer form button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgb(215, 54, 255), rgb(52, 208, 255));
+  opacity: 0;
+  transition: 0.2s linear opacity;
+  z-index: 0 !important;
+  border-radius: inherit;
+}
+
+.innerContainer form button:hover::after {
+  opacity: 1;
+}
+
+.innerContainer form button > * {
+  position: relative;
+  z-index: 2;
+}
+
+.innerContainer aside {
+  font-size: 16px;
+  margin-bottom: 10px;
+}

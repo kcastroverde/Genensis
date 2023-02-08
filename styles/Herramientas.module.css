@@ -1,0 +1,43 @@
+.topIcon {
+  display: block;
+  width: 45px;
+  height: auto;
+  margin: 15px auto;
+}
+
+.toolsList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.toolsList li {
+  background: linear-gradient(rgb(242, 63, 246), rgb(69, 255, 255));
+  padding: 3px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 5px rgb(167, 146, 250);
+}
+
+.toolInner {
+  background: rgb(25, 21, 41);
+  border-radius: inherit;
+  padding: 25px;
+  box-shadow: inset 0 0 5px rgb(167, 146, 250);
+}
+
+.toolsList li p {
+  text-align: justify;
+  text-align-last: center;
+  margin: 15px;
+}
+
+.toolsList li a {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.toolsList li a:hover {
+  text-decoration: underline;
+}

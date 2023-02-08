@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.container button {
+  height: 40px;
+  width: 200px;
+  border-radius: 20px;
+  font-size: 18px;
+  border: none;
+  background: rgb(25, 21, 41);
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.container button.selected {
+  background: linear-gradient(rgb(69, 255, 255), rgb(242, 63, 246));
+  cursor: default;
+}

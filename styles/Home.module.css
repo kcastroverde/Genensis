@@ -1,0 +1,280 @@
+.topRow {
+  display: flex;
+  align-items: stretch;
+  height: 270px;
+  gap: 25px;
+}
+
+.card {
+  background: rgb(24, 21, 40);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+
+.score {
+  width: 240px;
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+  background: rgb(24, 21, 40);
+  border-radius: 10px;
+}
+
+.score img {
+  width: calc(100% - 80px);
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  z-index: 1;
+  transition: 0.3s ease-in-out transform;
+  transform: none;
+}
+
+.score:hover img {
+  transform: scale(1.1) translateY(-10px);
+}
+
+.score .card {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.score .cardGradient {
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.score .cardGradient::after,
+.totalEarnings .cardGradient::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgb(52, 208, 255), rgb(215, 54, 255));
+  opacity: 0;
+  transition: 0.2s linear opacity;
+  z-index: 0 !important;
+}
+
+.score:hover .cardGradient::after,
+.totalEarnings:hover .cardGradient::after {
+  opacity: 1;
+}
+
+.cardGradient {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(rgb(82, 247, 249), rgb(240, 67, 247));
+  display: flex;
+}
+
+.cardGradient > * {
+  z-index: 2;
+}
+
+.totalEarnings {
+  width: 0;
+  flex-grow: 1;
+  position: relative;
+  cursor: default;
+}
+
+.totalEarnings img {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  z-index: 1;
+  height: 300px;
+  width: auto;
+}
+
+.totalEarnings .card {
+  width: 100%;
+  height: 100%;
+  padding-left: 12px;
+}
+
+.totalEarningsTopText {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.totalEarnings h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.totalEarningsToday {
+  margin: 12px 0;
+  font-size: 26px;
+}
+
+.totalEarnings .cardGradient {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.totalEarnings .cardGradient .progressBar {
+  width: 60%;
+}
+
+.columns {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.columns > div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.columns > div:nth-child(1) {
+  width: 240px;
+}
+
+.columns > div:nth-child(1) .card {
+  border: 1px solid;
+  border-color: rgba(255, 89, 253, 0);
+  transform: scale(1);
+  transition: 0.2s ease-out transform, 0.2s ease-out border-color,
+    0.2s ease-out box-shadow;
+  box-shadow: 0 0 3px rgba(255, 89, 253, 0), inset 0 0 3px rgba(255, 89, 253, 0);
+}
+
+.columns > div:nth-child(1) .card:hover {
+  border-color: rgba(255, 89, 253, 0.8);
+  box-shadow: 0 0 3px rgba(255, 89, 253, 0.8),
+    inset 0 0 3px rgba(255, 89, 253, 0.8);
+  transform: scale(1.05);
+}
+
+.columns > div:nth-child(2) {
+  width: 160px;
+  flex-grow: 1;
+}
+
+.columns > div:nth-child(3) {
+  width: 160px;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.valueCardLine {
+  height: 1px;
+  width: 90%;
+  margin: auto;
+  background: linear-gradient(90deg, rgb(82, 247, 249), rgb(240, 67, 247));
+}
+
+.valueCardValue {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 22px;
+}
+
+.liquidityWalletAmount {
+  margin: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.liquidityWalletAmount img {
+  height: 30px;
+  width: auto;
+}
+
+.teamVolume {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.teamVolume li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 15px;
+}
+
+.teamVolumeValue {
+  color: rgb(51, 197, 197);
+  font-size: 20px;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.chatForm {
+  position: relative;
+}
+
+.chatForm input {
+  background: #fff;
+  color: #000;
+  font-family: inherit;
+  border-radius: 20px;
+  padding-left: 15px;
+  width: 100%;
+  border: none;
+  height: 40px;
+  font-size: 16px;
+}
+
+.chatForm input:focus {
+  outline: 1px solid rgb(58, 176, 255);
+  border: none;
+}
+
+.chatForm button {
+  position: absolute;
+  right: 7px;
+  top: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.chatForm button img {
+  height: 25px;
+  width: auto;
+}
+
+.percentEarnedCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 45px 0;
+  font-size: 18px;
+}
