@@ -2,15 +2,18 @@
   display: flex;
   gap: 15px;
   flex-direction: column;
+  color: #ffff;
+  width: 100%;
 }
 
 .topCard {
   display: flex;
-  gap: 15px;
-  justify-content: space-between;
+  gap: 24%;
   align-items: center;
-  padding: 15px 90px;
+  padding: 15px 3%;
   position: relative;
+  background:rgb(25, 21, 41);
+  border-radius: 20px;
 }
 
 .hLine {
@@ -106,4 +109,117 @@
 
 .rightTeam .teamInfoText {
   text-align: right;
+}
+
+.spanRang>p{
+  font-size: 30px;
+}
+.spanRang>span{
+  color: #86E4FF;
+  font-size: 13px;
+}
+.rangImg{
+  width: 17%;
+  display: flex;
+  gap: 10%;
+}
+.rangImg img{
+  height: 50px;
+    width: 28%;
+}
+
+.searchBinaria{
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+}
+.sectionBinaria{
+  display: flex;
+  background-image: url(../../public/iconos/Base.png);
+  background-repeat: no-repeat;
+  width: 40%;
+  background-size: contain;
+}
+.sectionBinariaG{
+  width:40%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: linear-gradient(#2e1370, #2ec4ea);
+  font-size: 30px;
+  height: 55px;
+
+}
+.sectionBinaria input{
+  height: 55px;
+  background: transparent;
+  border: none;
+  border-radius: 23px;
+  color: #ffff;
+  font-size: 15px;
+
+}
+.sectionBinaria input::placeholder{
+  text-align: center;
+  color: #ffff;
+  font-size: 18px;
+
+
+}
+.CardBottonDis{
+  width: 70%;
+  background: linear-gradient(#2e1370, #2ec4ea);
+  padding: 1%;
+  border-radius: 40px;
+  color: #fff;
+  border: none;
+  margin-bottom: 4%;
+  cursor: pointer;
+  font-size: 30px;
+}
+.teamStats{
+  display: flex;
+  gap: 5%;
+  width: 129%;
+
+  background-image: url(../../public/iconos/Base.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.scoreTeams{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.scoreTeams p{
+  font-size: 15px;
+}
+.base{
+  width: 100%;
+  background-image: url(../../public//iconos/Base123.png);
+  height: 36em;
+  background-repeat: no-repeat;
+
+}
+.buttonline{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3%;
+
+}
+.buttonline button{
+  width: 10%;
+  background: linear-gradient(#2e1370, #2ec4ea);
+  padding: 1%;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 20px;
+  
 }

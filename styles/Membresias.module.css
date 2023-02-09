@@ -1,0 +1,23 @@
+.stalking{
+    width: 100%;
+    display: flex;
+    color: #fff;
+}
+.stalking ul{
+    width: 100%;
+    display: flex;  
+justify-content: space-between;
+}
+
+.stalking ul li{
+    text-align: center;
+    width: 18%;
+    list-style:none;
+    border: 2px solid #7CC8FF;
+    padding: 15px;
+    border-radius: 20px;
+}
+.stalking ul li:hover{
+    background:  linear-gradient(#86E4FF, #5B6FFF);
+    cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.Stalking{
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+}
+.StalkingGroup{
+  margin-top: 3%;
+}
+.StalkingTitles{
+  display: flex;
+  align-items: center;
+  padding: 1% 5%;
+  justify-content: space-between;
+  background:  linear-gradient(#86E4FF, #5B6FFF);
+  border-radius: 20px;
+}
+.StalkingTitles p{
+  font-size: 30px;
+}
+.StalkingMoneda{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+.StalkingMoneda img{
+ width: 20%;
+}
+.StalkingImg{
+ padding: 5% 7%;
+ background-image: url(../public/iconos/redondeado.png);
+ background-size: cover;
+ width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}
+.StalkingResults p{
+  margin-top: 2%;
+}
