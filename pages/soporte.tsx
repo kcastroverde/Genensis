@@ -3,6 +3,7 @@ import styles from "@/styles/Soporte.module.css";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { ChangeEvent, MouseEvent, useRef } from "react";
+import TabBinaria from "@/components/NetworkTabs/Binaria";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -20,7 +21,9 @@ export default function Soporte() {
 
   return (
     <PageAnimation>
-      <div className={"largeCard " + styles.container}>
+            <TabBinaria/>
+
+      {/*<div className={"largeCard " + styles.container}>
         <div className={styles.innerContainer}>
           <form>
             <label htmlFor="support-reason" style={{ pointerEvents: "none" }}>
@@ -74,7 +77,7 @@ export default function Soporte() {
           </form>
           <aside>{t("bottomText")}</aside>
         </div>
-      </div>
+      </div>*/}
     </PageAnimation>
   );
 }

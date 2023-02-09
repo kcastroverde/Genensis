@@ -36,7 +36,8 @@ export default function MiRed() {
 
   return (
     <PageAnimation>
-      <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
+      <TabBinaria/>
+      {/*<div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
         <TabSelector
           selectedTabId={selectedTab}
           onTabSelected={setSelectedTab}
@@ -45,7 +46,7 @@ export default function MiRed() {
         <AnimatePresence>
           <Component />
         </AnimatePresence>
-      </div>
+      </div>*/}
     </PageAnimation>
   );
 }
