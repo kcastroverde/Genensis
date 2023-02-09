@@ -30,7 +30,7 @@ export default function TokenStats() {
           <p> {t("marketCap")}: <span>${abbreviateNumber(marketCap)}</span> </p>
                    
         </div>
-        <button className={styles.CardBottonDis}>MiINAR AHORA</button>
+        <button className={styles.CardBottonDis}>MINAR AHORA</button>
 
         <div className={styles.spaceBeforeInfoBottom} />
         <div className={styles.infoBottom}>

@@ -104,14 +104,14 @@ export default function Home() {
           <div className={styles.cardDis}>
             <div className={styles.cardTitleWallet}>
             <div>
-              <div className={styles.cardTitle}>{t("Stalking")}</div>
+              <div className={styles.cardTitle}>{t("Staking")}</div>
               <div className={styles.valueCardValue}>
               <span className="dollarSign">$</span> 0,00
               </div>
             </div>
             <img src="/wallet.png" alt="" />
             </div>
-            <button className={styles.CardBottonDis}>HACER STALKING</button>
+            <button className={styles.CardBottonDis}>HACER STAKING</button>
 
           </div>
           
