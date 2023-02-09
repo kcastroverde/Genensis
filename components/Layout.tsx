@@ -16,7 +16,8 @@ export default function Layout({ children }: PropsWithChildren) {
         <main className={styles.main}>{children}</main>
       </div>
       <div className={styles.spaceBeforeFooter} />
-      <footer className={styles.footer}>{t("copyright")}</footer>
+      <footer className={styles.footer}>{t("Copyright 2023 Genesis. Todos los derechos reservados.")}</footer>
     </div>
   );
 }
+

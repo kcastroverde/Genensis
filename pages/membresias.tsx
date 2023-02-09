@@ -3,6 +3,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import styles from "@/styles/Membresias.module.css";
 import Stalking from "@/components/Stalking";
 import TabBinaria from "@/components/NetworkTabs/Binaria";
+import Retiro from "./retiro";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -15,7 +16,7 @@ export async function getStaticProps({ locale }: any) {
 export default function Membresias() {
   return (
     <PageAnimation>
-           <TabBinaria/>
+           <Retiro/>
 
     </PageAnimation>
   );

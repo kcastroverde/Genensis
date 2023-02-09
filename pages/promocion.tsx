@@ -2,6 +2,7 @@ import PageAnimation from "@/components/PageAnimation";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import UsersTable from "@/components/UsersTable";
 import TabBinaria from "@/components/NetworkTabs/Binaria";
+import Retiro from "./retiro";
 
 //export async function getStaticProps({ locale }: any) {
 //  return {
@@ -14,7 +15,7 @@ import TabBinaria from "@/components/NetworkTabs/Binaria";
 export default function promocion() {
   return (
     <PageAnimation>
-           <TabBinaria/>
+           <Retiro/>
 
     </PageAnimation>
   );

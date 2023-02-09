@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { ChangeEvent, MouseEvent, useRef } from "react";
 import TabBinaria from "@/components/NetworkTabs/Binaria";
+import Retiro from "./retiro";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -21,7 +22,7 @@ export default function Soporte() {
 
   return (
     <PageAnimation>
-            <TabBinaria/>
+            <Retiro/>
 
       {/*<div className={"largeCard " + styles.container}>
         <div className={styles.innerContainer}>
