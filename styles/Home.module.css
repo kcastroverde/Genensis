@@ -11,6 +11,16 @@
   overflow: hidden;
   position: relative;
   padding: 10px;
+  color: #fff;
+}
+.cardDis {
+  text-align: center;
+  background: rgb(24, 21, 40);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  color: #fff;
 }
 
 .score {
@@ -38,7 +48,7 @@
 }
 
 .score .card {
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
   position: relative;
   padding: 10px 20px;
@@ -47,7 +57,7 @@
   height: 100%;
 }
 
-.score .cardGradient {
+.score .cardGradient1 {
   justify-content: center;
   align-items: center;
   gap: 5px;
@@ -55,15 +65,15 @@
   z-index: 2;
 }
 
-.score .cardGradient::after,
-.totalEarnings .cardGradient::after {
+.score .cardGradient1::after,
+.totalEarnings .cardGradient1::after {
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(rgb(52, 208, 255), rgb(215, 54, 255));
+  background: linear-gradient(#2E93EA,#311E96);
   opacity: 0;
   transition: 0.2s linear opacity;
   z-index: 0 !important;
@@ -74,14 +84,26 @@
   opacity: 1;
 }
 
-.cardGradient {
+.cardGradient1 {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(rgb(82, 247, 249), rgb(240, 67, 247));
+  background: linear-gradient(#2E93EA,#311E96);
   display: flex;
+  color: #fff;
+}
+.cardGradient {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  height: 100px;
+  background: linear-gradient(#2E93EA,#311E96);
+  display: flex;
+  color: #fff;
+  border-radius: 0 0 20px 20px;
 }
 
 .cardGradient > * {
@@ -97,11 +119,11 @@
 
 .totalEarnings img {
   position: absolute;
-  right: -30px;
+  right: 84px;
   top: -30px;
   z-index: 1;
-  height: 300px;
-  width: auto;
+  /* height: 300px; */
+  max-width: 44%;
 }
 
 .totalEarnings .card {
@@ -115,26 +137,37 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  
 }
 
 .totalEarnings h2 {
   font-size: 30px;
   margin-bottom: 10px;
+  /*background: linear-gradient(to #2E93EA,80%,#311E96);*/
+
+  background: radial-gradient(  20% 791.52% at 2.54% -467.5%, #2E93EA 80%, #305AC2 100.98%, #311E96 134.48%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .totalEarningsToday {
   margin: 12px 0;
-  font-size: 26px;
+  font-size: 48px;
 }
 
-.totalEarnings .cardGradient {
+.totalEarnings .cardGradient{
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 25px;
 }
-
+.progressBar{
+  position: relative;
+  left: 43%;
+  margin-top: 7%;
+  z-index: 2;
+}
 .totalEarnings .cardGradient .progressBar {
   width: 60%;
 }
@@ -165,10 +198,18 @@
 }
 
 .columns > div:nth-child(1) .card:hover {
-  border-color: rgba(255, 89, 253, 0.8);
-  box-shadow: 0 0 3px rgba(255, 89, 253, 0.8),
-    inset 0 0 3px rgba(255, 89, 253, 0.8);
+  border-color:#2e1370;
+  box-shadow: 0 0 3px#2e1370,
+    inset 0 0 3px#2e1370;
   transform: scale(1.05);
+  cursor: pointer;
+}
+.columns > div:nth-child(1) .cardDis:hover {
+  border-color:#2e1370;
+  box-shadow: 0 0 3px#2e1370,
+    inset 0 0 3px#2e1370;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .columns > div:nth-child(2) {
@@ -185,13 +226,14 @@
   text-align: center;
   margin-bottom: 15px;
   margin-top: 15px;
+  padding: 0 26%;
 }
 
 .valueCardLine {
   height: 1px;
-  width: 90%;
+  width: 58%;
   margin: auto;
-  background: linear-gradient(90deg, rgb(82, 247, 249), rgb(240, 67, 247));
+  background: linear-gradient(90deg, rgb(57, 171, 173), #2E93EA);
 }
 
 .valueCardValue {
@@ -249,6 +291,10 @@
   height: 40px;
   font-size: 16px;
 }
+.chatForm input::placeholder {
+  text-align: center;
+  color: #2e1370;
+}
 
 .chatForm input:focus {
   outline: 1px solid rgb(58, 176, 255);
@@ -270,11 +316,38 @@
 }
 
 .percentEarnedCard {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  padding: 45px 0;
+  gap: 15px;*/
+  padding: 45px 41px;
   font-size: 18px;
+}
+.CardBottonDis{
+  width: 95%;
+  background: linear-gradient(#2e1370, #2ec4ea);
+  padding: 5%;
+  border-radius: 20px;
+  color: #fff;
+  border: none;
+  margin-bottom: 4%;
+  cursor: pointer;
+}
+
+.cardTitleWallet >img{
+  width: 19%;
+  height: auto;
+  position: absolute;
+  right: 13%;
+  top: 36px;
+}
+.cardDis>p{
+  margin-top: 2%;
+}
+.cardPorcen{
+text-align: center;}
+
+.slick-prev{
+  left: 0;
 }

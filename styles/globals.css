@@ -17,7 +17,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: url("/fondo.png");
+  background: url("/aaa.png");
   background-size: cover;
   font-family: sans-serif;
   font-size: 18px;

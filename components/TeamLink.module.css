@@ -1,34 +1,70 @@
 .container {
-  background: linear-gradient(rgb(105, 220, 247), rgb(218, 87, 253));
-  border-radius: 12px;
-  padding: 2px;
+  display: flex;
+  /*flex-direction: column;
+  background: linear-gradient(rgb(105, 220, 247), rgb(16, 10, 202));
+  border-radius: 20px;
+  padding: 2px;*/
+  background: none;
+  width: 100%;
+
 }
 
 .innerContainer {
+  width: 100%;
   height: 35px;
-  background: rgb(55, 68, 123);
+  background: none;
   border-radius: inherit;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.label {
+.labelTem1 {
+  display: flex;
   font-size: 14px;
-  background: linear-gradient(rgb(105, 220, 247), rgb(218, 87, 253));
-  width: 110px;
-  padding: 5px;
-  border-radius: 8px;
+  background: linear-gradient(#2b1573 , #21aad3);
+  width: 146px;
+  padding: 13px;
+  border-radius: 20px;
   height: 100%;
-  display: grid;
+  /* display: grid; */
   align-content: center;
   text-align: center;
   white-space: pre-wrap;
+  color: #ffffff;
+  align-items: center;
+  gap: 5%;
+  justify-content: center;
+}
+.labelTem1>img{
+  width: 23%;
+}
+.labelTem2 {
+  display: flex;
+  font-size: 14px;
+  background: linear-gradient(#21aad3, #2b1573);
+  width: 146px;
+  padding: 13px;
+  border-radius: 20px;
+  height: 100%;
+  /* display: grid; */
+  align-content: center;
+  text-align: center;
+  white-space: pre-wrap;
+  color: #ffffff;
+  align-items: center;
+  gap: 2%;
+  justify-content: center;
+  font-weight: 100;
+}
+.labelTem2>img{
+  width: 23%;
 }
 
 .url {
   overflow: hidden;
   white-space: nowrap;
   width: 130px;
-  margin: 5px;
+  margin: 2px;
   font-size: 16px;
 }

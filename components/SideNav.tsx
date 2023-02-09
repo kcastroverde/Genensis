@@ -21,10 +21,11 @@ export default function SideNav() {
     { id: "home", path: "/" },
     { id: "miRed", path: "/mi-red" },
     { id: "retiro" },
-    { id: "finanzas" },
+    //{ id: "finanzas" },
+    { id: "promocion" },
     { id: "membresias" },
-    { id: "herramientas" },
-    { id: "promociones" },
+    //{ id: "herramientas" },
+    //{ id: "promociones" },
     { id: "soporte" },
   ].map(fillDefaults);
 

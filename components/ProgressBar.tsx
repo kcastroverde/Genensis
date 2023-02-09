@@ -16,7 +16,7 @@ export default function ProgressBar({
   return (
     <div className={className}>
       <div className={styles.textLine}>
-        <div>{label}</div>
+        <div className={styles.textLineP}>{label}</div>
         <div>
           {completed}/{total}
         </div>

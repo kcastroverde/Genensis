@@ -1,22 +1,25 @@
 .container {
-  background: linear-gradient(rgb(233, 65, 236), rgb(74, 252, 255));
+  background: linear-gradient(#2e1370, rgb(74, 252, 255));
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 5px rgba(179, 129, 250);
+  box-shadow: 0 0 5px #2e1370;
   padding: 3px;
-  height: 450px;
+  height: 418px;
 }
 
 .innerContainer {
   background: rgb(24, 21, 40);
   width: 100%;
   border-radius: 10px;
-  box-shadow: inset 0 0 5px rgba(179, 129, 250);
+  box-shadow: inset 0 0 5px #2e1370;
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
+  color: #fff;
 }
 
 .innerContainer h2 {
@@ -31,31 +34,50 @@
 }
 
 .divLine {
-  width: 90%;
+  width: 55%;
   height: 1px;
-  background: #777;
+  background: #4a2eea;
   margin: 15px auto;
 }
 
 .price {
-  font-size: 36px;
+  font-size: 45px;
 }
 
 .infoBelowPrice {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   font-size: 12px;
   line-height: 1.5;
   opacity: 0.8;
 }
-
+.infoBelowPrice>p{
+  margin-top: 5%;
+  margin-left: 15%;
+}
 .spaceBeforeInfoBottom {
   flex-grow: 1;
 }
 
 .infoBottom {
+  text-align: center;
   line-height: 1.3;
   font-size: 15px;
 }
 
 .infoBottomValue {
   font-size: 22px;
+}
+
+.CardBottonDis{
+  width: 60%;
+  background: linear-gradient(#2e1370, #2ec4ea);
+  padding: 2%;
+  border-radius: 20px;
+  color: #fff;
+  border: none;
+  margin-top: 8%;
+  cursor: pointer;
+  font-size: 16px;
 }

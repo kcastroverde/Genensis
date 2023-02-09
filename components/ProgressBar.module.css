@@ -1,11 +1,25 @@
 .textLine {
   display: flex;
+  width: 52%;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
 .bar {
-  width: 100%;
+  width: 53%;
+  height: 8px;
+  border-radius: 4px;
+  background: #fff;
+  overflow: hidden;
+}
+.textLineP{
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.6;
+  color: #fff;
+  letter-spacing: 2px;}
+.bar {
+  width: 53%;
   height: 8px;
   border-radius: 4px;
   background: #fff;

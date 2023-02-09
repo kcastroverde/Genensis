@@ -6,8 +6,15 @@ import dynamic from "next/dynamic";
 import PageAnimation from "@/components/PageAnimation";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Slider, { Settings }  from "react-slick";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
 
 export async function getStaticProps({ locale }: any) {
+ 
+
   return {
     props: {
       ...(await serverSideTranslations(locale, [
@@ -19,7 +26,6 @@ export async function getStaticProps({ locale }: any) {
     },
   };
 }
-
 const AiFace = dynamic(() => import("@/components/AiFace/AiFace"), {
   ssr: false,
 });
@@ -27,30 +33,38 @@ const AiFace = dynamic(() => import("@/components/AiFace/AiFace"), {
 export default function Home() {
   const { t } = useTranslation("home");
 
+  const settings = {
+    dots: true,
+     
+  };
+
   return (
+    
     <PageAnimation>
       <div className={styles.topRow}>
         <div className={styles.score}>
           <img src="/manos.png" alt="" />
           <div className={styles.card}>
-            <div className={styles.cardGradient}>
+            <div className={styles.cardGradient1}>
               <div style={{ fontSize: "18px", lineHeight: 0.8 }}>
-                {t("calificacion")}
+                {t("Tu rango actual")}
               </div>
-              <div style={{ fontSize: "28px" }}>{t("consultar")}</div>
+              <div style={{ fontSize: "28px" }}>{t("Start")}</div>
             </div>
           </div>
         </div>
         <div className={styles.totalEarnings}>
-          <img src="/cajaFuerte.png" alt="" />
+          <img src="/aaaaa.png" alt="" />
           <div className={styles.card}>
             <div className={styles.totalEarningsTopText}>
-              <h2>{t("totalEarnings")}</h2>
-              {new Date().toLocaleDateString(undefined, { dateStyle: "long" })}
+              <h2>{t("Total Minado")}</h2>
+              {/*{new Date().toLocaleDateString(undefined, { dateStyle: "long" })}*/}
               <div className={styles.totalEarningsToday}>
                 <span className="dollarSign">$ </span>0.00
               </div>
             </div>
+            <div >
+              
             <div className={styles.cardGradient}>
               <div>
                 <div style={{ fontSize: "18px" }}>{t("time:thisWeek")}</div>
@@ -58,38 +72,50 @@ export default function Home() {
                   <span className="dollarSign">$ </span>0.00
                 </div>
               </div>
+                </div>
               <ProgressBar
                 className={styles.progressBar}
-                label={t("resetPuntoBinario")}
-                completed={5}
+                label={t("Final del ciclo binario")}
+                completed={0}
                 total={30}
-              />
+                />
+                </div>
             </div>
-          </div>
         </div>
       </div>
       <div className={styles.columns}>
         <div>
           <div className={styles.card}>
-            <div className={styles.cardTitle}>{t("liInvested")}</div>
+            <div className={styles.cardTitle}>{t("Total activo en mineria")}</div>
+            {/*<div className={styles.valueCardLine} />*/}
+            <div className={styles.valueCardValue}>
+              0,00 <span className="dollarSign">U$</span>
+            </div>
+          </div>
+          <div className={styles.cardDis}>
+            <div className={styles.cardTitle}>{t("Disponible USDT")}</div>
             <div className={styles.valueCardLine} />
             <div className={styles.valueCardValue}>
               0,00 U<span className="dollarSign">$</span>
             </div>
+              <button className={styles.CardBottonDis}>AUMENTAR MINERÍA</button>
+              <button className={styles.CardBottonDis}>RETIRAR IAG TOKEN</button>
           </div>
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>{t("equipoMenor")}</div>
-            <div className={styles.valueCardLine} />
-            <div className={styles.valueCardValue}>0</div>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>{t("weekEarnings")}</div>
-            <div className={styles.valueCardLine} />
-            <div className={styles.valueCardValue}>
-              0,00 U<span className="dollarSign">$</span>
+          <div className={styles.cardDis}>
+            <div className={styles.cardTitleWallet}>
+            <div>
+              <div className={styles.cardTitle}>{t("Stalking")}</div>
+              <div className={styles.valueCardValue}>
+              <span className="dollarSign">$</span> 0,00
+              </div>
             </div>
+            <img src="/wallet.png" alt="" />
+            </div>
+            <button className={styles.CardBottonDis}>HACER STALKING</button>
+
           </div>
-          <div className={styles.card}>
+          
+          {/*<div className={styles.card}>
             <div className={styles.cardTitle}>{t("liquidityWallet")}</div>
             <div className={styles.liquidityWalletAmount}>
               <div>
@@ -106,7 +132,7 @@ export default function Home() {
               </div>
               <img src="/iconos/wallet.png" alt="" />
             </div>
-          </div>
+          </div>*/}
           <div className={styles.card}>
             <div className={styles.cardTitle}>{t("teamVolume")}</div>
             <ul className={styles.teamVolume}>
@@ -120,13 +146,18 @@ export default function Home() {
               </li>
             </ul>
           </div>
+          <div className={styles.cardDis}>
+            <div className={styles.cardTitle}>{t("Puntos para binario")}</div>
+            <div className={styles.valueCardLine} />
+            <p>0</p>
+          </div>
         </div>
         <div>
           <div style={{ height: "350px" }}>
             <AiFace />
           </div>
           <form className={styles.chatForm}>
-            <input type="text" required />
+            <input type="text" placeholder="¿En qué puedo ayudarte?" required />
             <button type="submit">
               <img src="/iconos/enviar.png" alt="Send" />
             </button>
@@ -135,9 +166,25 @@ export default function Home() {
         <div>
           <TokenStats />
           <div className={styles.card + " " + styles.percentEarnedCard}>
-            <div>{t("percentEarned")}</div>
-            <RadialProgress progress={0.95} />
-            <div>{t("time:today")}</div>
+          <Slider {...settings}>
+
+            <div>
+              <div className={styles.cardPorcen}>{t("percentEarned")}</div>
+              <RadialProgress progress={0.95} />
+              <div className={styles.cardPorcen}>{t("time:today")}</div>
+            </div>
+            <div>
+              <div className={styles.cardPorcen}>{t("Total")}</div>
+              <RadialProgress progress={0.95} />
+              <div className={styles.cardPorcen}>{t("time:today")}</div>
+            </div>
+            <div>
+              <div className={styles.cardPorcen}>{t("Relacionado")}</div>
+              <RadialProgress progress={0.95} />
+              <div className={styles.cardPorcen}>{t("time:today")}</div>
+            </div>
+          </Slider>
+  
           </div>
         </div>
       </div>

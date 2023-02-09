@@ -4,18 +4,18 @@ import styles from "./TokenStats.module.css";
 export default function TokenStats() {
   const { t } = useTranslation("tokenStats");
 
-  const price = 44787.4;
+  const price = 0;
   const lastUpdated = "now";
-  const marketCap = 850950000000;
-  const usdVolume = 1790000000;
-  const allVolume = 10160000000;
+  const marketCap = 0 ;
+  const usdVolume = 0;
+  const allVolume = 0;
 
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
         <h2>
           <img src="/iconos/moneda.png" alt="" />
-          Giat
+          AIG Token
         </h2>
         <div className={styles.divLine} />
         <div>
@@ -25,19 +25,28 @@ export default function TokenStats() {
           </span>
         </div>
         <div className={styles.infoBelowPrice}>
-          {t("lastUpdated")}: {t("time:" + lastUpdated)}
-          <br />
-          {t("marketCap")}: ${abbreviateNumber(marketCap)}
+          <p>{t("lastUpdated")}: <span>{t("time:" + lastUpdated)}</span>  <span className="dollarSign">(+0)</span></p>
+          
+          <p> {t("marketCap")}: <span>${abbreviateNumber(marketCap)}</span> </p>
+                   
         </div>
+        <button className={styles.CardBottonDis}>MiINAR AHORA</button>
+
         <div className={styles.spaceBeforeInfoBottom} />
         <div className={styles.infoBottom}>
-          {t("usdVolume")}{" "}
+          {t("Volumen de hoy")}{" "}
           <span className={styles.infoBottomValue}>
             <span className="dollarSign">$ </span>
             {abbreviateNumber(usdVolume)}
           </span>
           <br />
-          {t("allVol")}{" "}
+          {t("Capitalización")}{" "}
+          <span className={styles.infoBottomValue}>
+            <span className="dollarSign">$ </span>
+            {abbreviateNumber(allVolume)}
+          </span>
+          <br />
+          {t("Quema total")}{" "}
           <span className={styles.infoBottomValue}>
             <span className="dollarSign">$ </span>
             {abbreviateNumber(allVolume)}
