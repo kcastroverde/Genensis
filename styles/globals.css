@@ -27,6 +27,7 @@ body {
   background-size: cover;
   font-family: sans-serif;
   font-size: 18px;
+  background-repeat: no-repeat;
 }
 
 a {
