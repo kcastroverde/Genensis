@@ -99,7 +99,7 @@ export default function Home() {
               0,00 U<span className="dollarSign">$</span>
             </div>
               <button className={styles.CardBottonDis}>AUMENTAR MINERÍA</button>
-              <button className={styles.CardBottonDis}>RETIRAR IAG TOKEN</button>
+              <button className={styles.CardBottonDis}>RETIRAR AIG TOKEN</button>
           </div>
           <div className={styles.cardDis}>
             <div className={styles.cardTitleWallet}>
