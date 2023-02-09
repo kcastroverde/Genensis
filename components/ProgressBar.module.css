@@ -1,12 +1,12 @@
 .textLine {
   display: flex;
-  width: 52%;
+  width: 44%;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
 .bar {
-  width: 53%;
+  width: 44%;
   height: 8px;
   border-radius: 4px;
   background: #fff;
@@ -19,7 +19,7 @@
   color: #fff;
   letter-spacing: 2px;}
 .bar {
-  width: 53%;
+  width: 44%;
   height: 8px;
   border-radius: 4px;
   background: #fff;
