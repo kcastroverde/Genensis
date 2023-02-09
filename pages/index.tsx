@@ -169,19 +169,19 @@ export default function Home() {
           <Slider {...settings}>
 
             <div>
-              <div className={styles.cardPorcen}>{t("percentEarned")}</div>
+              <div className={styles.cardPorcen}>{t("Porcentaje Ganado (500 USDT)")}</div>
               <RadialProgress progress={0.95} />
               <div className={styles.cardPorcen}>{t("time:today")}</div>
             </div>
             <div>
-              <div className={styles.cardPorcen}>{t("Total")}</div>
-              <RadialProgress progress={0.95} />
-              <div className={styles.cardPorcen}>{t("time:today")}</div>
+              <div className={styles.cardPorcen}>{t("Ganado (4000 USDT)")}</div>
+              <RadialProgress progress={0.40} />
+              <div className={styles.cardPorcen}>{t("Mes")}</div>
             </div>
             <div>
-              <div className={styles.cardPorcen}>{t("Relacionado")}</div>
-              <RadialProgress progress={0.95} />
-              <div className={styles.cardPorcen}>{t("time:today")}</div>
+              <div className={styles.cardPorcen}>{t("Ganado (60.000 USDT)")}</div>
+              <RadialProgress progress={0.75} />
+              <div className={styles.cardPorcen}>{t("Año")}</div>
             </div>
           </Slider>
   
