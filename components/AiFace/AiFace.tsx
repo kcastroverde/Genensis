@@ -21,7 +21,8 @@ export default function AiFace() {
 
   return (
     <div className={styles.container + " " + (appear ? "" : styles.hidden)}>
-      {appear && (
+      <img src="/iconos/genesis_ia.png" alt="" />
+      {/*{appear && (
         <Canvas style={{ height: "100%" }}>
           <Face />
           <Image3d
@@ -36,7 +37,7 @@ export default function AiFace() {
             <meshBasicMaterial map={lightTx} transparent={true} opacity={0.3} />
           </mesh>
         </Canvas>
-      )}
+      )}*/}
     </div>
   );
 }
