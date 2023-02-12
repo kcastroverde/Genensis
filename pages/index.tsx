@@ -10,10 +10,15 @@ import Slider, { Settings }  from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-
+import { RootState } from "@/data/store";
+import { useSelector, useDispatch } from "react-redux";
+import { setData } from "@/data/data";
+import { useEffect, useState } from "react";
 
 export async function getStaticProps({ locale }: any) {
- 
+  
+
+
 
   return {
     props: {
@@ -30,14 +35,44 @@ const AiFace = dynamic(() => import("@/components/AiFace/AiFace"), {
   ssr: false,
 });
 
-export default function Home() {
+export default function Home() {  
   const { t } = useTranslation("home");
+   const data = useSelector((state: RootState) => state.data);
+  // console.log("data", data);
+  const [miningData, setMiningData]: any = useState({});
 
   const settings = {
     dots: true,
-     
   };
 
+  type DataState = {
+    id: number;
+    GHZ: number;
+    claimed: Number;
+  }
+
+  const getMiningData = () => {
+    let miningData:DataState = {
+      id: 0,
+      GHZ: 0,
+      claimed: 0,
+    }
+    data.data.map((value) => {
+      if (value.status) {
+        miningData.GHZ += value.GHZ;
+        miningData.claimed += value.claimed;
+      }
+    });
+    setMiningData(miningData);
+  }
+
+    useEffect(() => {
+      if(data.dataLoaded){
+        getMiningData();
+      }
+    }, [data.dataLoaded]);
+
+    
   return (
     
     <PageAnimation>
@@ -60,7 +95,7 @@ export default function Home() {
               <h2>{t("Total Minado")}</h2>
               {/*{new Date().toLocaleDateString(undefined, { dateStyle: "long" })}*/}
               <div className={styles.totalEarningsToday}>
-                <span className="dollarSign">$ </span>0.00
+               {/* <> <span className="dollarSign">$ </span>{miningData.claimed}</> */}
               </div>
             </div>
             <div >
@@ -69,7 +104,7 @@ export default function Home() {
               <div>
                 <div style={{ fontSize: "18px" }}>{t("time:thisWeek")}</div>
                 <div style={{ fontSize: "28px" }}>
-                  <span className="dollarSign">$ </span>0.00
+                 <> <span className="dollarSign">$ </span>{} </>
                 </div>
               </div>
                 </div>
@@ -169,20 +204,24 @@ export default function Home() {
           <Slider {...settings}>
 
             <div>
-              <div className={styles.cardPorcen}>{t("Porcentaje Ganado (500 USDT)")}</div>
-              <RadialProgress progress={0.95} />
-              <div className={styles.cardPorcen}>{t("time:today")}</div>
-            </div>
-            <div>
-              <div className={styles.cardPorcen}>{t("Ganado (4000 USDT)")}</div>
-              <RadialProgress progress={0.40} />
-              <div className={styles.cardPorcen}>{t("Mes")}</div>
-            </div>
-            <div>
-              <div className={styles.cardPorcen}>{t("Ganado (60.000 USDT)")}</div>
+              <div className={styles.cardPorcen}>{
+              t(`Poder de Minado USD:`)}{miningData.GHZ}
+              </div>
               <RadialProgress progress={0.75} />
-              <div className={styles.cardPorcen}>{t("Año")}</div>
+              <div className={styles.cardPorcen}>{t("paquetes totales")}</div>
             </div>
+            {/* {data.dataLoaded && (
+              data.data.map((item, index) => (
+                <div key={index}>
+                  <div className={styles.cardPorcen}>
+                    {t(`Poder de Minado USD:${item.GHZ}`)}
+                    </div>
+                  <RadialProgress progress={item.claimed/(item.GHZ * 2.5) } />
+                  <div className={styles.cardPorcen}>{t(`paquete ${index + 1}`)}</div>
+                </div>
+              ))
+            )} */}
+
           </Slider>
   
           </div>

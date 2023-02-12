@@ -12,12 +12,16 @@
     "@next/font": "13.1.5",
     "@react-three/fiber": "^8.10.1",
     "@react-three/postprocessing": "^2.7.0",
+    "@reduxjs/toolkit": "^1.9.2",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@types/react-slick": "^0.23.10",
+    "@web3modal/ethereum": "^2.1.1",
+    "@web3modal/react": "^2.1.1",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
+    "ethers": "^5.7.2",
     "framer-motion": "^8.5.3",
     "i18next": "^22.4.9",
     "i18next-browser-languagedetector": "^7.0.1",
@@ -29,11 +33,13 @@
     "react-dom": "18.2.0",
     "react-i18next": "^12.1.4",
     "react-konva": "^18.2.3",
+    "react-redux": "^8.0.5",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "three": "^0.148.0",
     "typescript": "4.9.4",
-    "use-image": "^1.1.0"
+    "use-image": "^1.1.0",
+    "wagmi": "^0.11.5"
   },
   "devDependencies": {
     "@types/three": "^0.148.1"
